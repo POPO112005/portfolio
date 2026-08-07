@@ -1,0 +1,65 @@
+// Edit this file to replace placeholder content with your own.
+
+export const profile = {
+  name: 'Kritkhachon Vanichakul',
+  handle: 'Kritkhachon',
+  role: 'Frontend Developer',
+  roles: ['Frontend Developer'],
+  education: 'Bangkok University',
+  tagline: 'Turning designs into clean, responsive interfaces.',
+  bio: "I'm a Frontend Developer currently studying at Bangkok University. I enjoy turning designs into clean, responsive interfaces, and I've gained hands-on experience building for real users through my work at Cosi (Center of Specialty Innovation).",
+  email: 'kritkhachon.vani@bumail.net',
+  resumeUrl: '#',
+  social: {
+    github: 'https://github.com/POPO112005',
+    linkedin: 'https://www.linkedin.com/in/kritkhachon-vani/',
+    email: 'mailto:kritkhachon.vani@bumail.net',
+  },
+}
+
+export const skills = [
+  {
+    category: 'Languages',
+    items: ['TypeScript', 'JavaScript', 'Python', 'Go', 'SQL'],
+  },
+  {
+    category: 'Frontend',
+    items: ['React', 'Next.js', 'Vite', 'Tailwind CSS'],
+  },
+  {
+    category: 'Backend',
+    items: ['Node.js', 'Express', 'PostgreSQL', 'REST / GraphQL'],
+  },
+  {
+    category: 'Tools & Cloud',
+    items: ['Docker', 'AWS', 'Git', 'CI/CD', 'Linux'],
+  },
+]
+
+export const projects = [
+  {
+    title: 'ConteX Skills',
+    description:
+      'A skill-development and learning platform that helps users build and track their skills.',
+    tech: ['React', 'Next.js', 'Vercel'],
+    github: undefined,
+    demo: 'https://1mobyspj.vercel.app/',
+  },
+]
+
+export const experience = [
+  {
+    role: 'Frontend Developer',
+    company: 'Cosi (Center of Specialty Innovation)',
+    period: '2025',
+    points: [
+      'Building and maintaining frontend features as part of the team.',
+    ],
+  },
+  {
+    role: 'Studying Computer Science / IT',
+    company: 'Bangkok University',
+    period: 'Present',
+    points: ['Currently studying, with a focus on frontend and web development.'],
+  },
+]
