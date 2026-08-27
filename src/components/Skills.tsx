@@ -1,6 +1,7 @@
 import { skills } from '../data/portfolio'
-import { bullet, heading, section } from './styles'
+import { heading, section } from './styles'
 import { SectionHeading } from './SectionHeading'
+import { TechIcon } from './techIcons'
 
 export function Skills() {
   return (
@@ -15,7 +16,8 @@ export function Skills() {
             <h3 className={`mb-4 text-[15px] text-accent ${heading}`}>{group.category}</h3>
             <ul className="flex flex-col gap-[10px] text-[14.5px] text-text-dim">
               {group.items.map((item) => (
-                <li key={item} className={bullet}>
+                <li key={item} className="flex items-center gap-[10px]">
+                  <TechIcon name={item} size={15} />
                   {item}
                 </li>
               ))}
