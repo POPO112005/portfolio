@@ -41,6 +41,11 @@ export const projects = [
     title: 'ConteX Skills',
     description:
       'A skill-development and learning platform that helps users build and track their skills.',
+    highlights: [
+      'Dashboard for tracking skill progress and learning milestones',
+      'REST API and data layer built with PostgreSQL',
+      'Built with Next.js, TypeScript, and Tailwind CSS, running on Bun',
+    ],
     tech: ['Next.js', 'Bun', 'Tailwind CSS', 'TypeScript', 'PostgreSQL'],
     github: undefined as string | undefined,
     demo: 'https://1mobyspj.vercel.app/' as string | undefined,
@@ -49,6 +54,11 @@ export const projects = [
   {
     title: 'Tourism',
     description: 'เว็บการท่องเที่ยวของชุมชน',
+    highlights: [
+      'Highlights local community attractions and points of interest',
+      'Go backend with Prisma handling data access',
+      'Responsive UI built with React, TypeScript, and Tailwind CSS',
+    ],
     tech: ['React', 'TypeScript', 'Tailwind CSS', 'Bun', 'Go', 'Prisma'],
     github: undefined as string | undefined,
     demo: undefined as string | undefined,
