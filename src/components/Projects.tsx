@@ -3,6 +3,7 @@ import { projects } from '../data/portfolio'
 import { ExternalLinkIcon, FolderIcon, GithubIcon } from './icons'
 import { ProjectModal } from './ProjectModal'
 import { SectionHeading } from './SectionHeading'
+import { TechIcon } from './techIcons'
 
 export function Projects() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
@@ -51,7 +52,10 @@ export function Projects() {
             <p>{project.description}</p>
             <ul className="project-tech">
               {project.tech.map((t) => (
-                <li key={t}>{t}</li>
+                <li key={t}>
+                  <TechIcon name={t} size={13} />
+                  {t}
+                </li>
               ))}
             </ul>
           </article>

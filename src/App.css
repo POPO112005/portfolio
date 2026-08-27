@@ -478,11 +478,25 @@ main {
 .project-tech {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 14px;
+  gap: 8px;
   margin-top: 20px;
   font-family: var(--mono);
   font-size: 12px;
   color: var(--text-dim);
+}
+
+.project-tech li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 5px 10px;
+}
+
+.project-tech li svg {
+  flex-shrink: 0;
 }
 
 /* ---------- experience ---------- */
