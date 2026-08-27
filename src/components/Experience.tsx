@@ -1,22 +1,25 @@
 import { experience } from '../data/portfolio'
+import { bullet, heading, section } from './styles'
 import { SectionHeading } from './SectionHeading'
 
 export function Experience() {
   return (
-    <section id="experience" className="section">
+    <section id="experience" className={section}>
       <SectionHeading index="04" title="Experience" />
-      <ol className="timeline">
+      <ol className="relative flex flex-col gap-9 border-l border-border pl-7">
         {experience.map((item) => (
-          <li key={`${item.role}-${item.company}`}>
-            <div className="timeline-marker" />
-            <div className="timeline-content">
-              <span className="timeline-period">{item.period}</span>
-              <h3>
-                {item.role} <span className="timeline-company">@ {item.company}</span>
+          <li key={`${item.role}-${item.company}`} className="relative">
+            <div className="absolute top-1 left-[-33px] h-[9px] w-[9px] rounded-full border-2 border-accent bg-bg" />
+            <div>
+              <span className="font-mono text-[13px] text-accent">{item.period}</span>
+              <h3 className={`mt-[6px] text-[17px] text-text-bright ${heading}`}>
+                {item.role} <span className="font-normal text-text-dim">@ {item.company}</span>
               </h3>
-              <ul>
+              <ul className="mt-3 flex flex-col gap-2 text-[14.5px] leading-[1.6] text-text-dim">
                 {item.points.map((point) => (
-                  <li key={point}>{point}</li>
+                  <li key={point} className={bullet}>
+                    {point}
+                  </li>
                 ))}
               </ul>
             </div>

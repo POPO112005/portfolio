@@ -1,4 +1,3 @@
-import './App.css'
 import { About } from './components/About'
 import { Contact } from './components/Contact'
 import { Experience } from './components/Experience'
@@ -12,7 +11,7 @@ function App() {
   return (
     <>
       <Nav />
-      <main>
+      <main className="flex flex-col">
         <Hero />
         <About />
         <Skills />
