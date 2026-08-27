@@ -76,25 +76,27 @@ export function Hero() {
       </div>
 
       <div className="justify-self-center max-[900px]:justify-self-stretch" aria-hidden="true">
-        <div className="relative mx-auto h-[300px] w-[380px] max-w-full overflow-hidden max-[900px]:h-[250px] max-[900px]:w-full">
+        <div className="relative mx-auto h-[420px] w-[460px] max-w-full overflow-hidden max-[900px]:h-[330px] max-[900px]:w-full">
           {heroPhotos.map((src, i) => {
             let rel = i - photoIndex
             if (rel > 1) rel -= heroPhotos.length
             if (rel < -1) rel += heroPhotos.length
             const isCenter = rel === 0
             const isRight = rel === 1
+            const radialMask =
+              '[mask-image:radial-gradient(ellipse_at_center,black_25%,transparent_85%)] [-webkit-mask-image:radial-gradient(ellipse_at_center,black_25%,transparent_85%)]'
             return (
               <img
                 key={src}
                 src={src}
                 alt=""
                 onClick={() => setPhotoIndex(i)}
-                className={`absolute top-1/2 left-1/2 h-[300px] w-[220px] -translate-y-1/2 cursor-pointer rounded-xl border object-cover shadow-elevated transition-all duration-500 ease-out max-[900px]:h-[250px] max-[900px]:w-[180px] ${
+                className={`absolute top-1/2 left-1/2 h-[420px] w-[300px] -translate-y-1/2 cursor-pointer rounded-xl border object-cover shadow-elevated transition-all duration-500 ease-out max-[900px]:h-[330px] max-[900px]:w-[230px] ${
                   isCenter
                     ? 'z-20 translate-x-[-50%] scale-100 border-accent-border opacity-100'
                     : isRight
-                      ? 'z-10 translate-x-[calc(-50%+130px)] scale-[0.82] border-border opacity-50 blur-[1px] max-[900px]:translate-x-[calc(-50%+100px)]'
-                      : 'z-10 translate-x-[calc(-50%-130px)] scale-[0.82] border-border opacity-50 blur-[1px] max-[900px]:translate-x-[calc(-50%-100px)]'
+                      ? `z-10 translate-x-[calc(-50%+160px)] scale-[0.82] border-border opacity-60 blur-[1px] ${radialMask} max-[900px]:translate-x-[calc(-50%+120px)]`
+                      : `z-10 translate-x-[calc(-50%-160px)] scale-[0.82] border-border opacity-60 blur-[1px] ${radialMask} max-[900px]:translate-x-[calc(-50%-120px)]`
                 }`}
               />
             )
