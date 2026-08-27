@@ -83,8 +83,6 @@ export function Hero() {
             if (rel < -1) rel += heroPhotos.length
             const isCenter = rel === 0
             const isRight = rel === 1
-            const radialMask =
-              '[mask-image:radial-gradient(ellipse_at_center,black_25%,transparent_85%)] [-webkit-mask-image:radial-gradient(ellipse_at_center,black_25%,transparent_85%)]'
             return (
               <img
                 key={src}
@@ -95,8 +93,8 @@ export function Hero() {
                   isCenter
                     ? 'z-20 translate-x-[-50%] scale-100 border-accent-border opacity-100'
                     : isRight
-                      ? `z-10 translate-x-[calc(-50%+160px)] scale-[0.82] border-border opacity-60 blur-[1px] ${radialMask} max-[900px]:translate-x-[calc(-50%+120px)]`
-                      : `z-10 translate-x-[calc(-50%-160px)] scale-[0.82] border-border opacity-60 blur-[1px] ${radialMask} max-[900px]:translate-x-[calc(-50%-120px)]`
+                      ? 'z-10 translate-x-[calc(-50%+160px)] scale-[0.82] border-border opacity-60 blur-[1px] max-[900px]:translate-x-[calc(-50%+120px)]'
+                      : 'z-10 translate-x-[calc(-50%-160px)] scale-[0.82] border-border opacity-60 blur-[1px] max-[900px]:translate-x-[calc(-50%-120px)]'
                 }`}
               />
             )
