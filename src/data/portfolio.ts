@@ -41,9 +41,10 @@ export const projects = [
     title: 'ConteX Skills',
     description:
       'A skill-development and learning platform that helps users build and track their skills.',
-    tech: ['React', 'Next.js', 'Vercel'],
+    tech: ['Next.js', 'Bun', 'Tailwind CSS', 'TypeScript', 'PostgreSQL'],
     github: undefined,
     demo: 'https://1mobyspj.vercel.app/',
+    images: ['/1moby.png', '/1moby2.png', '/1moby3.png'],
   },
 ]
 
