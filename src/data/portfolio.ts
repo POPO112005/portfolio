@@ -52,7 +52,7 @@ export const projects = [
     tech: ['React', 'TypeScript', 'Tailwind CSS', 'Bun', 'Go', 'Prisma'],
     github: undefined as string | undefined,
     demo: undefined as string | undefined,
-    images: [] as string[],
+    images: ['/tourism1.svg', '/tourism2.svg', '/tourism3.svg'],
   },
 ]
 

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" font-family="'Segoe UI', sans-serif">
+  <rect width="960" height="600" fill="#0b0e14"/>
+
+  <!-- browser chrome -->
+  <rect x="0" y="0" width="960" height="44" fill="#141920"/>
+  <circle cx="24" cy="22" r="6" fill="#ff7b72"/>
+  <circle cx="46" cy="22" r="6" fill="#ffcb6b"/>
+  <circle cx="68" cy="22" r="6" fill="#7ee787"/>
+  <rect x="100" y="12" width="420" height="20" rx="10" fill="#0b0e14"/>
+  <text x="118" y="26" fill="#7d8590" font-size="12">thai-community-tourism.example/explore</text>
+
+  <!-- page header -->
+  <text x="60" y="90" fill="#f0f3f7" font-size="24" font-weight="700">สำรวจแหล่งท่องเที่ยวชุมชน</text>
+  <text x="60" y="116" fill="#7d8590" font-size="13">ทั้งหมด 24 ชุมชนใน 8 จังหวัด</text>
+
+  <!-- filter chips -->
+  <g font-size="12">
+    <rect x="60" y="140" width="86" height="30" rx="15" fill="#5eead4" opacity="0.15" stroke="#5eead4" stroke-opacity="0.4"/>
+    <text x="103" y="159" fill="#5eead4" text-anchor="middle">ทั้งหมด</text>
+    <rect x="156" y="140" width="96" height="30" rx="15" fill="none" stroke="#232a35"/>
+    <text x="204" y="159" fill="#7d8590" text-anchor="middle">ภูเขา</text>
+    <rect x="262" y="140" width="96" height="30" rx="15" fill="none" stroke="#232a35"/>
+    <text x="310" y="159" fill="#7d8590" text-anchor="middle">ทะเล</text>
+    <rect x="368" y="140" width="110" height="30" rx="15" fill="none" stroke="#232a35"/>
+    <text x="423" y="159" fill="#7d8590" text-anchor="middle">วิถีชุมชน</text>
+  </g>
+
+  <!-- 3x2 destination grid -->
+  <g>
+    <!-- row 1 -->
+    <rect x="60" y="196" width="270" height="170" rx="12" fill="#141920" stroke="#232a35"/>
+    <rect x="60" y="196" width="270" height="100" rx="12" fill="#3a6b57"/>
+    <rect x="60" y="196" width="270" height="100" fill="#3a6b57"/>
+    <text x="80" y="322" fill="#f0f3f7" font-size="14" font-weight="600">บ้านริมคลอง</text>
+    <text x="80" y="342" fill="#7d8590" font-size="11">เชียงใหม่ · ★ 4.8</text>
+
+    <rect x="345" y="196" width="270" height="170" rx="12" fill="#141920" stroke="#232a35"/>
+    <rect x="345" y="196" width="270" height="100" rx="12" fill="#4a7fc9"/>
+    <rect x="345" y="196" width="270" height="100" fill="#4a7fc9"/>
+    <text x="365" y="322" fill="#f0f3f7" font-size="14" font-weight="600">หมู่บ้านชาวเล</text>
+    <text x="365" y="342" fill="#7d8590" font-size="11">ภูเก็ต · ★ 4.6</text>
+
+    <rect x="630" y="196" width="270" height="170" rx="12" fill="#141920" stroke="#232a35"/>
+    <rect x="630" y="196" width="270" height="100" rx="12" fill="#c98a4b"/>
+    <rect x="630" y="196" width="270" height="100" fill="#c98a4b"/>
+    <text x="650" y="322" fill="#f0f3f7" font-size="14" font-weight="600">ตลาดโบราณริมน้ำ</text>
+    <text x="650" y="342" fill="#7d8590" font-size="11">อัมพวา · ★ 4.9</text>
+
+    <!-- row 2 -->
+    <rect x="60" y="384" width="270" height="170" rx="12" fill="#141920" stroke="#232a35"/>
+    <rect x="60" y="384" width="270" height="100" rx="12" fill="#8a63c9"/>
+    <rect x="60" y="384" width="270" height="100" fill="#8a63c9"/>
+    <text x="80" y="510" fill="#f0f3f7" font-size="14" font-weight="600">ดอยชาวเขา</text>
+    <text x="80" y="530" fill="#7d8590" font-size="11">แม่ฮ่องสอน · ★ 4.7</text>
+
+    <rect x="345" y="384" width="270" height="170" rx="12" fill="#141920" stroke="#232a35"/>
+    <rect x="345" y="384" width="270" height="100" rx="12" fill="#4fae8f"/>
+    <rect x="345" y="384" width="270" height="100" fill="#4fae8f"/>
+    <text x="365" y="510" fill="#f0f3f7" font-size="14" font-weight="600">สวนเกษตรอินทรีย์</text>
+    <text x="365" y="530" fill="#7d8590" font-size="11">เชียงราย · ★ 4.5</text>
+
+    <rect x="630" y="384" width="270" height="170" rx="12" fill="#141920" stroke="#232a35"/>
+    <rect x="630" y="384" width="270" height="100" rx="12" fill="#c9705a"/>
+    <rect x="630" y="384" width="270" height="100" fill="#c9705a"/>
+    <text x="650" y="510" fill="#f0f3f7" font-size="14" font-weight="600">เกาะประมงพื้นบ้าน</text>
+    <text x="650" y="530" fill="#7d8590" font-size="11">ตราด · ★ 4.8</text>
+  </g>
+
+  <text x="900" y="588" fill="#4a5262" font-size="11" text-anchor="end">mockup preview</text>
+</svg>
