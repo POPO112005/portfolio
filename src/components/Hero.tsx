@@ -1,10 +1,21 @@
+import { useEffect, useState } from 'react'
 import { profile } from '../data/portfolio'
 import { useTypedText } from '../hooks/useTypedText'
 import { ArrowRightIcon, GithubIcon, LinkedinIcon, MailIcon } from './icons'
 import { btnBase, btnGhost, btnPrimary, heading } from './styles'
 
+const heroPhotos = ['/po1.jpg', '/po2.jpg', '/po3.jpg']
+
 export function Hero() {
   const typed = useTypedText(profile.roles)
+  const [photoIndex, setPhotoIndex] = useState(0)
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setPhotoIndex((i) => (i + 1) % heroPhotos.length)
+    }, 3200)
+    return () => clearInterval(id)
+  }, [])
 
   return (
     <section
@@ -65,28 +76,29 @@ export function Hero() {
       </div>
 
       <div className="justify-self-center max-[900px]:justify-self-stretch" aria-hidden="true">
-        <div className="w-full max-w-[420px] overflow-hidden rounded-[10px] border border-border bg-bg-elevated shadow-elevated">
-          <div className="flex items-center gap-2 border-b border-border bg-bg-alt px-[14px] py-3">
-            <span className="h-[11px] w-[11px] rounded-full bg-red" />
-            <span className="h-[11px] w-[11px] rounded-full bg-yellow" />
-            <span className="h-[11px] w-[11px] rounded-full bg-green" />
-            <span className="ml-2 font-mono text-xs text-text-dim">{profile.handle}@portfolio: ~</span>
-          </div>
-          <div className="p-5 font-mono text-[13.5px] leading-[1.7]">
-            <p className="text-text-dim">
-              <span className="text-accent">$</span> cat profile.json
-            </p>
-            <pre className="my-[10px] whitespace-pre-wrap break-words text-text">{`{
-  "name": "${profile.name}",
-  "role": "${profile.role}",
-  "education": "${profile.education}",
-  "focus": "${profile.tagline}"
-}`}</pre>
-            <p className="text-text-dim">
-              <span className="text-accent">$</span>{' '}
-              <span className="inline-block animate-blink text-accent motion-reduce:animate-none">_</span>
-            </p>
-          </div>
+        <div className="relative mx-auto h-[300px] w-[380px] max-w-full overflow-hidden max-[900px]:h-[250px] max-[900px]:w-full">
+          {heroPhotos.map((src, i) => {
+            let rel = i - photoIndex
+            if (rel > 1) rel -= heroPhotos.length
+            if (rel < -1) rel += heroPhotos.length
+            const isCenter = rel === 0
+            const isRight = rel === 1
+            return (
+              <img
+                key={src}
+                src={src}
+                alt=""
+                onClick={() => setPhotoIndex(i)}
+                className={`absolute top-1/2 left-1/2 h-[300px] w-[220px] -translate-y-1/2 cursor-pointer rounded-xl border object-cover shadow-elevated transition-all duration-500 ease-out max-[900px]:h-[250px] max-[900px]:w-[180px] ${
+                  isCenter
+                    ? 'z-20 translate-x-[-50%] scale-100 border-accent-border opacity-100'
+                    : isRight
+                      ? 'z-10 translate-x-[calc(-50%+130px)] scale-[0.82] border-border opacity-50 blur-[1px] max-[900px]:translate-x-[calc(-50%+100px)]'
+                      : 'z-10 translate-x-[calc(-50%-130px)] scale-[0.82] border-border opacity-50 blur-[1px] max-[900px]:translate-x-[calc(-50%-100px)]'
+                }`}
+              />
+            )
+          })}
         </div>
       </div>
     </section>
