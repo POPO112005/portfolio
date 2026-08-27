@@ -42,9 +42,17 @@ export const projects = [
     description:
       'A skill-development and learning platform that helps users build and track their skills.',
     tech: ['Next.js', 'Bun', 'Tailwind CSS', 'TypeScript', 'PostgreSQL'],
-    github: undefined,
-    demo: 'https://1mobyspj.vercel.app/',
+    github: undefined as string | undefined,
+    demo: 'https://1mobyspj.vercel.app/' as string | undefined,
     images: ['/1moby.png', '/1moby2.png', '/1moby3.png'],
+  },
+  {
+    title: 'Tourism',
+    description: 'เว็บการท่องเที่ยวของชุมชน',
+    tech: ['React', 'TypeScript', 'Tailwind CSS', 'Bun', 'Go', 'Prisma'],
+    github: undefined as string | undefined,
+    demo: undefined as string | undefined,
+    images: [] as string[],
   },
 ]
 

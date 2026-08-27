@@ -39,16 +39,18 @@ export function Projects() {
                     <GithubIcon size={20} />
                   </a>
                 )}
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`${project.title} live demo`}
-                  onClick={(e) => e.stopPropagation()}
-                  className="hover:text-accent"
-                >
-                  <ExternalLinkIcon size={20} />
-                </a>
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`${project.title} live demo`}
+                    onClick={(e) => e.stopPropagation()}
+                    className="hover:text-accent"
+                  >
+                    <ExternalLinkIcon size={20} />
+                  </a>
+                )}
               </div>
             </div>
             <h3 className={`mt-[18px] text-lg text-text-bright ${heading}`}>{project.title}</h3>

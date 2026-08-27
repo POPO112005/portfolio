@@ -131,16 +131,20 @@ export function ProjectModal({ project, onClose }: { project: Project; onClose: 
             ))}
           </ul>
 
-          <div className="mt-5 flex gap-3">
-            {project.github && (
-              <a href={project.github} target="_blank" rel="noreferrer" className={`${btnBase} ${btnGhost}`}>
-                <GithubIcon size={16} /> Code
-              </a>
-            )}
-            <a href={project.demo} target="_blank" rel="noreferrer" className={`${btnBase} ${btnGhost}`}>
-              <ExternalLinkIcon size={16} /> Live demo
-            </a>
-          </div>
+          {(project.github || project.demo) && (
+            <div className="mt-5 flex gap-3">
+              {project.github && (
+                <a href={project.github} target="_blank" rel="noreferrer" className={`${btnBase} ${btnGhost}`}>
+                  <GithubIcon size={16} /> Code
+                </a>
+              )}
+              {project.demo && (
+                <a href={project.demo} target="_blank" rel="noreferrer" className={`${btnBase} ${btnGhost}`}>
+                  <ExternalLinkIcon size={16} /> Live demo
+                </a>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </div>
