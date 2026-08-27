@@ -22,13 +22,15 @@ export function Projects() {
               if (e.key === 'Enter' || e.key === ' ') setActiveIndex(i)
             }}
           >
-            <div className="relative h-[168px] w-full overflow-hidden bg-bg-alt bg-[repeating-linear-gradient(135deg,var(--color-border)_0px,var(--color-border)_1px,transparent_1px,transparent_10px)]">
-              {project.images?.[0] && (
+            <div className="relative w-full overflow-hidden bg-bg-alt">
+              {project.images?.[0] ? (
                 <img
                   src={project.images[0]}
                   alt=""
-                  className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+                  className="block w-full transition duration-300 group-hover:scale-[1.03]"
                 />
+              ) : (
+                <div className="aspect-video w-full bg-[repeating-linear-gradient(135deg,var(--color-border)_0px,var(--color-border)_1px,transparent_1px,transparent_10px)]" />
               )}
               <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-bg-elevated to-transparent" />
             </div>
