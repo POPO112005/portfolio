@@ -42,7 +42,7 @@ export function Hero() {
             View Projects <ArrowRightIcon />
           </a>
           <a href="#contact" className={`${btnBase} ${btnGhost}`}>
-            Get in Touch
+            Contact Me
           </a>
         </div>
 
@@ -54,7 +54,7 @@ export function Hero() {
             aria-label="GitHub"
             className="text-text-dim transition duration-150 hover:-translate-y-0.5 hover:text-accent"
           >
-            <GithubIcon />
+            <GithubIcon size={26} />
           </a>
           <a
             href={profile.social.linkedin}
@@ -63,14 +63,14 @@ export function Hero() {
             aria-label="LinkedIn"
             className="text-text-dim transition duration-150 hover:-translate-y-0.5 hover:text-accent"
           >
-            <LinkedinIcon />
+            <LinkedinIcon size={24} />
           </a>
           <a
             href={profile.social.email}
             aria-label="Email"
             className="text-text-dim transition duration-150 hover:-translate-y-0.5 hover:text-accent"
           >
-            <MailIcon />
+            <MailIcon size={24} />
           </a>
         </div>
       </div>

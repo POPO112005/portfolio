@@ -53,7 +53,7 @@ export const projects = [
   },
   {
     title: 'Tourism',
-    description: 'เว็บการท่องเที่ยวของชุมชน',
+    description: 'Community tourism website',
     highlights: [
       'Highlights local community attractions and points of interest',
       'Go backend with Prisma handling data access',
@@ -62,7 +62,7 @@ export const projects = [
     tech: ['React', 'TypeScript', 'Tailwind CSS', 'Bun', 'Go', 'Prisma'],
     github: undefined as string | undefined,
     demo: undefined as string | undefined,
-    images: ['/tourism1.svg', '/tourism2.svg', '/tourism3.svg'],
+    images: ['/tourism1.jpg', '/tourism2.jpg', '/tourism3.jpg', '/tourism4.jpg'],
   },
 ]
 

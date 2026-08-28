@@ -14,10 +14,6 @@ export function About() {
             <dd className="text-text-bright">{profile.education}</dd>
           </div>
           <div>
-            <dt className="mb-1 text-text-dim">Expertise</dt>
-            <dd className="text-text-bright">{profile.role}</dd>
-          </div>
-          <div>
             <dt className="mb-1 text-text-dim">Experience</dt>
             <dd className="text-text-bright">{experience[0].company}</dd>
           </div>
