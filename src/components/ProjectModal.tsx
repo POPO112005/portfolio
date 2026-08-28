@@ -44,7 +44,7 @@ export function ProjectModal({ project, onClose }: { project: Project; onClose: 
       onClick={onClose}
     >
       <div
-        className="max-h-[min(88vh,900px)] w-full max-w-[720px] animate-rise-in overflow-y-auto rounded-xl border border-border bg-bg-elevated px-[30px] pt-7 pb-[30px] shadow-elevated max-[640px]:px-[18px] max-[640px]:pt-[22px] max-[640px]:pb-6"
+        className="max-h-[min(94vh,1080px)] w-full max-w-[1040px] animate-rise-in overflow-y-auto rounded-xl border border-border bg-bg-elevated px-[30px] pt-7 pb-[30px] shadow-elevated max-[640px]:px-[18px] max-[640px]:pt-[22px] max-[640px]:pb-6"
         role="dialog"
         aria-modal="true"
         aria-label={project.title}
@@ -83,7 +83,7 @@ export function ProjectModal({ project, onClose }: { project: Project; onClose: 
               <img
                 src={images[index]}
                 alt={`${project.title} screenshot ${index + 1}`}
-                className="block max-h-[60vh] max-w-full object-contain max-[640px]:max-h-[46vh]"
+                className="block max-h-[75vh] max-w-full object-contain max-[640px]:max-h-[46vh]"
               />
               {images.length > 1 && (
                 <button
