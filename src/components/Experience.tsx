@@ -1,4 +1,5 @@
 import { experience } from '../data/portfolio'
+import { ExternalLinkIcon } from './icons'
 import { bullet, heading, section } from './styles'
 import { SectionHeading } from './SectionHeading'
 
@@ -13,7 +14,23 @@ export function Experience() {
             <div>
               <span className="font-mono text-[13px] text-accent">{item.period}</span>
               <h3 className={`mt-[6px] text-[17px] text-text-bright ${heading}`}>
-                {item.role} <span className="font-normal text-text-dim">@ {item.company}</span>
+                {item.role}{' '}
+                <span className="font-normal text-text-dim">
+                  @{' '}
+                  {item.companyUrl ? (
+                    <a
+                      href={item.companyUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 transition duration-150 hover:text-accent"
+                    >
+                      {item.company}
+                      <ExternalLinkIcon size={13} />
+                    </a>
+                  ) : (
+                    item.company
+                  )}
+                </span>
               </h3>
               <ul className="mt-3 flex flex-col gap-2 text-[14.5px] leading-[1.6] text-text-dim">
                 {item.points.map((point) => (

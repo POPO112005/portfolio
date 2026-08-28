@@ -1,4 +1,5 @@
 import { experience, profile } from '../data/portfolio'
+import { ExternalLinkIcon } from './icons'
 import { section } from './styles'
 import { SectionHeading } from './SectionHeading'
 
@@ -15,7 +16,21 @@ export function About() {
           </div>
           <div>
             <dt className="mb-1 text-text-dim">Experience</dt>
-            <dd className="text-text-bright">{experience[0].company}</dd>
+            <dd className="text-text-bright">
+              {experience[0].companyUrl ? (
+                <a
+                  href={experience[0].companyUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 transition duration-150 hover:text-accent"
+                >
+                  {experience[0].company}
+                  <ExternalLinkIcon size={13} />
+                </a>
+              ) : (
+                experience[0].company
+              )}
+            </dd>
           </div>
         </dl>
       </div>

@@ -40,9 +40,9 @@ export const skills = [
 
 export const projects = [
   {
-    title: 'ConteX Skills',
+    title: '1MOBY',
     description:
-      'A skill-development and learning platform that helps users build and track their skills.',
+      'A skill-development and learning platform that helps employees in companies build and track their skills.',
     highlights: [
       'Dashboard for tracking skill progress and learning milestones',
       'REST API and data layer built with PostgreSQL',
@@ -55,9 +55,9 @@ export const projects = [
   },
   {
     title: 'Tourism',
-    description: 'Community tourism website',
+    description: 'Help recommend tourist attractions in the community to website visitors.',
     highlights: [
-      'Highlights local community attractions and points of interest',
+      'You can see the colored dots on the map to indicate the type of tourist attractions in each region.',
       'Go backend with Prisma handling data access',
       'Responsive UI built with React, TypeScript, and Tailwind CSS',
     ],
@@ -72,6 +72,7 @@ export const experience = [
   {
     role: 'Frontend Developer',
     company: 'Cosi (Center of Specialty Innovation)',
+    companyUrl: 'https://cosi.bu.ac.th/',
     period: '2025',
     points: [
       'Building and maintaining frontend features as part of the team.',
