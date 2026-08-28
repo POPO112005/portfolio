@@ -155,7 +155,7 @@ export const content: Record<Language, Content> = {
         highlights: [
           'Dashboard for tracking skill progress and learning milestones',
           'REST API and data layer built with PostgreSQL',
-          'Built with Next.js, TypeScript, and Tailwind CSS, running on Bun',
+          
         ],
         tech: ['Next.js', 'Bun', 'Tailwind CSS', 'TypeScript', 'PostgreSQL'],
         github: undefined,
