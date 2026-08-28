@@ -103,7 +103,7 @@ export const content: Record<Language, Content> = {
     tagline: 'Turning designs into clean, responsive interfaces.',
     bio: "I build and ship production web apps for real clients \n— currently a 4th-year Information technology student at Bangkok University.",
     about:
-      "I've spent time in the field as a Frontend Developer at Cosi (Center of Specialty Innovation), where I built a community tourism site for Thailand's Department of Community Development. Now in my 4th year studying Information Technology at Bangkok University, I bring that real-world experience into every project I build, starting with 1MOBY, a learning platform with a full progress-tracking dashboard. React, Next.js, TypeScript, Tailwind, and a solid handle on REST/GraphQL APIs make up my toolkit, and I'm always adding to it.",
+      "I've spent time in the field as a Frontend Developer at Cosi (Center of Specialty Innovation), where I built a community tourism site for Thailand's Department of Community Development. Now in my 4th year studying Information Technology at Bangkok University, I bring that real-world experience into every project I build, starting with ConteX Skills, built for the company 1MOBY — a platform for assessing and developing employees' skills. React, Next.js, TypeScript, Tailwind, and a solid handle on REST/GraphQL APIs make up my toolkit, and I'm always adding to it.",
     education: 'Bangkok University (4th Year)',
     nav: {
       about: 'About',
@@ -150,12 +150,11 @@ export const content: Record<Language, Content> = {
     projects: [
       {
         title: '1MOBY',
-        description:
-          'A skill-development and learning platform that helps employees in companies build and track their skills.',
+        description: "A skill-assessment and development platform for a company's employees.",
         highlights: [
           'Dashboard for tracking skill progress and learning milestones',
           'REST API and data layer built with PostgreSQL',
-          
+
         ],
         tech: ['Next.js', 'Bun', 'Tailwind CSS', 'TypeScript', 'PostgreSQL'],
         github: undefined,
@@ -217,7 +216,7 @@ export const content: Record<Language, Content> = {
     tagline: 'เปลี่ยนดีไซน์ให้กลายเป็นหน้าเว็บที่ใช้งานได้จริง',
     bio: 'ผมสร้างและส่งมอบเว็บแอปพลิเคชันจริงให้ลูกค้า \n— ปัจจุบันกำลังศึกษาชั้นปีที่ 4 สาขาเทคโนโลยีสารสนเทศ ที่มหาวิทยาลัยกรุงเทพ',
     about:
-      'ผมเคยทำงานจริงในตำแหน่ง Frontend Developer ที่ Cosi (Center of Specialty Innovation) ระหว่างนั้นได้ทำโปรเจกต์เว็บไซต์ท่องเที่ยวชุมชนให้กับกรมพัฒนาชุมชน ตอนนี้กำลังศึกษาชั้นปีที่ 4 สาขาเทคโนโลยีสารสนเทศ ที่มหาวิทยาลัยกรุงเทพ และนำประสบการณ์ตรงนั้นมาใช้ในทุกโปรเจกต์ที่สร้าง เริ่มจาก 1MOBY แพลตฟอร์มเรียนรู้ที่มีแดชบอร์ดติดตามความก้าวหน้าแบบเต็มรูปแบบ เครื่องมือหลักของผมคือ React, Next.js, TypeScript, Tailwind และมีพื้นฐาน REST/GraphQL API ที่แน่น และยังคงพัฒนาต่อเนื่องเสมอ',
+      'ผมเคยทำงานจริงในตำแหน่ง Frontend Developer ที่ Cosi (Center of Specialty Innovation) ระหว่างนั้นได้ทำโปรเจกต์เว็บไซต์ท่องเที่ยวในชุมชนให้กับกรมพัฒนาชุมชน ตอนนี้กำลังศึกษาชั้นปีที่ 4 สาขาเทคโนโลยีสารสนเทศ ที่มหาวิทยาลัยกรุงเทพ และนำประสบการณ์ตรงนั้นมาใช้ในทุกโปรเจกต์ที่สร้าง เริ่มจากทำโปรเจกค์ Contex Skills ให้กับบริษัท 1MOBY โปรเจกต์นี้เป็นแพลตฟอร์มประเมินทักษะและพัฒนาทักษะของพนักงานในบริษัท เครื่องมือหลักของผมคือ React, Next.js, TypeScript, Tailwind และมีพื้นฐาน REST/GraphQL API ที่แน่น และยังคงพัฒนาต่อเนื่องเสมอ',
     education: 'มหาวิทยาลัยกรุงเทพ (ปี 4)',
     nav: {
       about: 'เกี่ยวกับ',
@@ -264,7 +263,7 @@ export const content: Record<Language, Content> = {
     projects: [
       {
         title: '1MOBY',
-        description: 'แพลตฟอร์มพัฒนาและติดตามทักษะที่ช่วยให้พนักงานในบริษัทสร้างและติดตามทักษะของตัวเอง',
+        description: 'แพลตฟอร์มประเมินทักษะและพัฒนาทักษะของพนักงานในบริษัท',
         highlights: [
           'แดชบอร์ดสำหรับติดตามความก้าวหน้าและเป้าหมายการเรียนรู้',
           'REST API และชั้นข้อมูลที่สร้างด้วย PostgreSQL',
