@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
-import type { projects } from '../data/portfolio'
+import type { Content } from '../data/portfolio'
+import { content } from '../data/portfolio'
+import { useLanguage } from '../i18n/useLanguage'
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
@@ -11,9 +13,11 @@ import {
 import { btnBase, btnGhost, heading } from './styles'
 import { TechIcon } from './techIcons'
 
-type Project = (typeof projects)[number]
+type Project = Content['projects'][number]
 
 export function ProjectModal({ project, onClose }: { project: Project; onClose: () => void }) {
+  const { language } = useLanguage()
+  const t = content[language].projectModal
   const images = project.images ?? []
   const [index, setIndex] = useState(0)
 
@@ -54,7 +58,7 @@ export function ProjectModal({ project, onClose }: { project: Project; onClose: 
           <button
             className="inline-flex cursor-pointer items-center justify-center rounded-md border-none bg-none p-1 text-text-dim transition duration-150 hover:bg-border hover:text-text-bright"
             onClick={onClose}
-            aria-label="Close"
+            aria-label={t.close}
           >
             <CloseIcon size={20} />
           </button>
@@ -71,7 +75,7 @@ export function ProjectModal({ project, onClose }: { project: Project; onClose: 
                 <button
                   className="absolute top-1/2 left-3 inline-flex h-9 w-9 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-border bg-[rgba(11,14,20,0.7)] text-text-bright transition duration-150 hover:border-accent-border hover:text-accent"
                   onClick={goPrev}
-                  aria-label="Previous image"
+                  aria-label={t.prevImage}
                 >
                   <ChevronLeftIcon />
                 </button>
@@ -85,7 +89,7 @@ export function ProjectModal({ project, onClose }: { project: Project; onClose: 
                 <button
                   className="absolute top-1/2 right-3 inline-flex h-9 w-9 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-border bg-[rgba(11,14,20,0.7)] text-text-bright transition duration-150 hover:border-accent-border hover:text-accent"
                   onClick={goNext}
-                  aria-label="Next image"
+                  aria-label={t.nextImage}
                 >
                   <ChevronRightIcon />
                 </button>
@@ -97,7 +101,7 @@ export function ProjectModal({ project, onClose }: { project: Project; onClose: 
                 <div className="mt-[14px] rounded-full border border-border bg-bg px-[14px] py-1 font-mono text-xs text-text">
                   {index + 1} / {images.length}
                 </div>
-                <p className="mt-[10px] text-[12.5px] text-text-dim">Use ← → keys or click thumbnails to navigate</p>
+                <p className="mt-[10px] text-[12.5px] text-text-dim">{t.keyboardHint}</p>
                 <div className="mt-4 flex flex-wrap justify-center gap-2">
                   {images.map((src, i) => (
                     <button
@@ -106,7 +110,7 @@ export function ProjectModal({ project, onClose }: { project: Project; onClose: 
                         i === index ? 'border-accent-border opacity-100' : 'opacity-55 hover:opacity-85'
                       }`}
                       onClick={() => setIndex(i)}
-                      aria-label={`Go to image ${i + 1}`}
+                      aria-label={`${t.goToImage} ${i + 1}`}
                     >
                       <img src={src} alt="" className="block h-full w-full object-cover" />
                     </button>
@@ -118,15 +122,15 @@ export function ProjectModal({ project, onClose }: { project: Project; onClose: 
         )}
 
         <div className="mt-6 border-t border-border pt-5">
-          <span className="font-mono text-xs tracking-[0.04em] text-text-dim uppercase">Tech used</span>
+          <span className="font-mono text-xs tracking-[0.04em] text-text-dim uppercase">{t.techUsed}</span>
           <ul className="mt-3 flex flex-wrap gap-2">
-            {project.tech.map((t) => (
+            {project.tech.map((tech) => (
               <li
-                key={t}
+                key={tech}
                 className="inline-flex items-center gap-[7px] rounded-md border border-border bg-bg px-3 py-[5px] font-mono text-[12.5px] text-text"
               >
-                <TechIcon name={t} />
-                {t}
+                <TechIcon name={tech} />
+                {tech}
               </li>
             ))}
           </ul>
@@ -135,12 +139,12 @@ export function ProjectModal({ project, onClose }: { project: Project; onClose: 
             <div className="mt-5 flex gap-3">
               {project.github && (
                 <a href={project.github} target="_blank" rel="noreferrer" className={`${btnBase} ${btnGhost}`}>
-                  <GithubIcon size={16} /> Code
+                  <GithubIcon size={16} /> {t.code}
                 </a>
               )}
               {project.demo && (
                 <a href={project.demo} target="_blank" rel="noreferrer" className={`${btnBase} ${btnGhost}`}>
-                  <ExternalLinkIcon size={16} /> Live demo
+                  <ExternalLinkIcon size={16} /> {t.liveDemo}
                 </a>
               )}
             </div>

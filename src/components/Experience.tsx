@@ -1,14 +1,18 @@
-import { experience } from '../data/portfolio'
+import { content } from '../data/portfolio'
+import { useLanguage } from '../i18n/useLanguage'
 import { ExternalLinkIcon } from './icons'
 import { bullet, heading, section } from './styles'
 import { SectionHeading } from './SectionHeading'
 
 export function Experience() {
+  const { language } = useLanguage()
+  const t = content[language]
+
   return (
     <section id="experience" className={section}>
-      <SectionHeading index="04" title="Experience" />
+      <SectionHeading index="04" title={t.sectionTitles.experience} />
       <ol className="relative flex flex-col gap-9 border-l border-border pl-7">
-        {experience.map((item) => (
+        {t.experience.map((item) => (
           <li key={`${item.role}-${item.company}`} className="relative">
             <div className="absolute top-1 left-[-33px] h-[9px] w-[9px] rounded-full border-2 border-accent bg-bg" />
             <div>

@@ -1,14 +1,18 @@
-import { skills } from '../data/portfolio'
+import { content } from '../data/portfolio'
+import { useLanguage } from '../i18n/useLanguage'
 import { heading, section } from './styles'
 import { SectionHeading } from './SectionHeading'
 import { TechIcon } from './techIcons'
 
 export function Skills() {
+  const { language } = useLanguage()
+  const t = content[language]
+
   return (
     <section id="skills" className={section}>
-      <SectionHeading index="02" title="Skills" />
+      <SectionHeading index="02" title={t.sectionTitles.skills} />
       <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-5">
-        {skills.map((group) => (
+        {t.skills.map((group) => (
           <div
             className="rounded-[10px] border border-border bg-bg-elevated p-6 transition duration-150 hover:-translate-y-[3px] hover:border-accent-border"
             key={group.category}

@@ -1,14 +1,18 @@
-import { profile } from '../data/portfolio'
+import { content, profile } from '../data/portfolio'
+import { useLanguage } from '../i18n/useLanguage'
 import { GithubIcon, LinkedinIcon, MailIcon } from './icons'
 import { btnBase, btnLarge, btnPrimary, section } from './styles'
 import { SectionHeading } from './SectionHeading'
 
 export function Contact() {
+  const { language } = useLanguage()
+  const t = content[language]
+
   return (
     <section id="contact" className={`${section} pb-30 text-center`}>
-      <SectionHeading index="05" title="Get In Touch" center />
+      <SectionHeading index="05" title={t.sectionTitles.contact} center />
       <a className={`${btnBase} ${btnPrimary} ${btnLarge} mt-9`} href={profile.social.email}>
-        Say Hello
+        {t.contact.sayHello}
       </a>
       <div className="mt-10 flex items-center justify-center gap-5">
         <a

@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { projects } from '../data/portfolio'
+import { content } from '../data/portfolio'
+import { useLanguage } from '../i18n/useLanguage'
 import { ProjectModal } from './ProjectModal'
 import { SectionHeading } from './SectionHeading'
 import { ArrowRightIcon, ExternalLinkIcon, GithubIcon } from './icons'
@@ -7,13 +8,15 @@ import { TechIcon } from './techIcons'
 import { btnBase, btnGhost, bullet, heading, section } from './styles'
 
 export function Projects() {
+  const { language } = useLanguage()
+  const t = content[language]
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
 
   return (
     <section id="projects" className={section}>
-      <SectionHeading index="03" title="Projects" />
+      <SectionHeading index="03" title={t.sectionTitles.projects} />
       <div className="flex flex-col gap-20 md:gap-24">
-        {projects.map((project, i) => {
+        {t.projects.map((project, i) => {
           const reversed = i % 2 === 1
           return (
             <article
@@ -27,7 +30,7 @@ export function Projects() {
                 onClick={() => setActiveIndex(i)}
                 role="button"
                 tabIndex={0}
-                aria-label={`View ${project.title} screenshots`}
+                aria-label={`${t.projectModal.viewScreenshots}: ${project.title}`}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter' || e.key === ' ') setActiveIndex(i)
                 }}
@@ -67,13 +70,13 @@ export function Projects() {
                 )}
 
                 <ul className="mt-5 flex flex-wrap gap-2">
-                  {project.tech.map((t) => (
+                  {project.tech.map((tech) => (
                     <li
-                      key={t}
+                      key={tech}
                       className="inline-flex items-center gap-[6px] rounded-md border border-border bg-bg px-3 py-[6px] font-mono text-[11.5px] tracking-wide text-text uppercase"
                     >
-                      <TechIcon name={t} size={13} />
-                      {t}
+                      <TechIcon name={tech} size={13} />
+                      {tech}
                     </li>
                   ))}
                 </ul>
@@ -88,7 +91,7 @@ export function Projects() {
                         className={`${btnBase} ${btnGhost}`}
                         onClick={(e) => e.stopPropagation()}
                       >
-                        <GithubIcon size={16} /> Code
+                        <GithubIcon size={16} /> {t.projectModal.code}
                       </a>
                     )}
                     {project.demo && (
@@ -99,7 +102,7 @@ export function Projects() {
                         className={`${btnBase} ${btnGhost}`}
                         onClick={(e) => e.stopPropagation()}
                       >
-                        <ExternalLinkIcon size={16} /> Live demo
+                        <ExternalLinkIcon size={16} /> {t.projectModal.liveDemo}
                       </a>
                     )}
                   </div>
@@ -111,7 +114,7 @@ export function Projects() {
       </div>
 
       {activeIndex !== null && (
-        <ProjectModal project={projects[activeIndex]} onClose={() => setActiveIndex(null)} />
+        <ProjectModal project={t.projects[activeIndex]} onClose={() => setActiveIndex(null)} />
       )}
     </section>
   )

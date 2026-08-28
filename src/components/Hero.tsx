@@ -1,13 +1,16 @@
 import { useEffect, useState } from 'react'
-import { profile } from '../data/portfolio'
+import { content, profile } from '../data/portfolio'
 import { useTypedText } from '../hooks/useTypedText'
+import { useLanguage } from '../i18n/useLanguage'
 import { ArrowRightIcon, GithubIcon, LinkedinIcon, MailIcon } from './icons'
 import { btnBase, btnGhost, btnPrimary, heading } from './styles'
 
 const heroPhotos = ['/po1.jpg', '/po2.jpg', '/po3.jpg']
 
 export function Hero() {
-  const typed = useTypedText(profile.roles)
+  const { language } = useLanguage()
+  const t = content[language]
+  const typed = useTypedText(t.roles)
   const [photoIndex, setPhotoIndex] = useState(0)
 
   useEffect(() => {
@@ -26,23 +29,25 @@ export function Hero() {
         <p className="mb-3 font-mono text-[15px] text-text-dim">
           <span className="text-accent">$</span> whoami
         </p>
-        <h1 className={`text-[clamp(32px,5vw,52px)] leading-[1.15] tracking-[-0.5px] text-text-bright ${heading}`}>
-          Hi, I&apos;m <span className="text-accent">{profile.name}</span>
+        <h1
+          className={`text-[clamp(32px,5vw,52px)] leading-[1.15] tracking-[-0.5px] whitespace-pre-line text-text-bright ${heading}`}
+        >
+          {t.hero.greeting} <span className="text-accent">{t.name}</span>
         </h1>
         <p className="mt-3 min-h-[1.4em] font-mono text-[clamp(18px,2.6vw,24px)] text-accent">
           {typed}
           <span className="inline-block animate-blink text-accent motion-reduce:animate-none">_</span>
         </p>
         <p className="mt-5 max-w-[520px] text-base leading-[1.7] whitespace-pre-line text-text-dim max-[900px]:max-w-none">
-          {profile.bio}
+          {t.bio}
         </p>
 
         <div className="mt-8 flex flex-wrap gap-[14px]">
           <a href="#projects" className={`${btnBase} ${btnPrimary}`}>
-            View Projects <ArrowRightIcon />
+            {t.hero.viewProjects} <ArrowRightIcon />
           </a>
           <a href="#contact" className={`${btnBase} ${btnGhost}`}>
-            Contact Me
+            {t.hero.contactMe}
           </a>
         </div>
 
