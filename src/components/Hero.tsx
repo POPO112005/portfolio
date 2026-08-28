@@ -33,7 +33,7 @@ export function Hero() {
           {typed}
           <span className="inline-block animate-blink text-accent motion-reduce:animate-none">_</span>
         </p>
-        <p className="mt-5 max-w-[520px] text-base leading-[1.7] text-text-dim max-[900px]:max-w-none">
+        <p className="mt-5 max-w-[520px] text-base leading-[1.7] whitespace-pre-line text-text-dim max-[900px]:max-w-none">
           {profile.bio}
         </p>
 

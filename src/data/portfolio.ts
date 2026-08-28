@@ -5,9 +5,11 @@ export const profile = {
   handle: 'Kritkhachon',
   role: 'Frontend Developer',
   roles: ['Frontend Developer'],
-  education: 'Bangkok University',
+  education: 'Bangkok University (4th Year)',
   tagline: 'Turning designs into clean, responsive interfaces.',
-  bio: "I'm a Frontend Developer currently studying at Bangkok University. I enjoy turning designs into clean, responsive interfaces, and I've gained hands-on experience building for real users through my work at Cosi (Center of Specialty Innovation).",
+  bio: "I build and ship production web apps for real clients \n— currently a 4th-year Information technology student at Bangkok University.",
+  about:
+    "I've spent time in the field as a Frontend Developer at Cosi (Center of Specialty Innovation), shipping production features end-to-end. Now in my 4th year studying Information Technology at Bangkok University, I bring that real-world experience into every project I build — from ConteX Skills, a learning platform with a full progress-tracking dashboard, to a community tourism site powered by a Go backend. React, Next.js, TypeScript, Tailwind, and a solid handle on REST/GraphQL APIs make up my toolkit, and I'm always adding to it.",
   email: 'kritkhachon.vani@bumail.net',
   resumeUrl: '#',
   social: {
