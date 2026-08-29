@@ -101,7 +101,7 @@ export const content: Record<Language, Content> = {
     role: 'Frontend Developer',
     roles: ['Frontend Developer'],
     tagline: 'Turning designs into clean, responsive interfaces.',
-    bio: "I build and ship production web apps for real clients \n— currently a 4th-year Information technology student at Bangkok University.",
+    bio: "I build and ship production web apps for real clients \n— currently a 4th-year Information Technology student at Bangkok University.",
     about:
       "I've spent time in the field as a Frontend Developer at Cosi (Center of Specialty Innovation), where I built a community tourism site for Thailand's Department of Community Development. Now in my 4th year studying Information Technology at Bangkok University, I bring that real-world experience into every project I build, starting with ConteX Skills, built for the company 1MOBY — a platform for assessing and developing employees' skills. React, Next.js, TypeScript, Tailwind, and a solid handle on REST/GraphQL APIs make up my toolkit, and I'm always adding to it.",
     education: 'Bangkok University (4th Year)',
@@ -150,7 +150,7 @@ export const content: Record<Language, Content> = {
     projects: [
       {
         title: '1MOBY',
-        description: "A skill-assessment and development platform LMS for a company's employees.\nThis helps solve the problem of companies relying heavily on manual Excel usage.",
+        description: "A skill-assessment and development LMS platform for a company's employees.\nThis helps solve the problem of companies relying heavily on manual Excel usage.",
         highlights: [
           'Dashboard for tracking skill progress and learning milestones',
           'REST API and data layer built with PostgreSQL',
@@ -163,9 +163,9 @@ export const content: Record<Language, Content> = {
       },
       {
         title: 'Tourism',
-        description: 'Help recommend tourist attractions in the community to website visitors and improved community income..',
+        description: 'Helps recommend tourist attractions in the community to website visitors and improves community income.',
         highlights: [
-          'You can see the colored dots on the map to indicate the type of tourist attractions in each region.',
+          'Colored dots on the map indicate the type of tourist attraction in each region.',
           'Go backend with Prisma handling data access',
           'Responsive UI built with React, TypeScript, and Tailwind CSS',
         ],
