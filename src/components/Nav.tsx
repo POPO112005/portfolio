@@ -67,6 +67,8 @@ export function Nav() {
           <a
             className="rounded-md border border-accent-border px-[14px] py-2 text-accent"
             href={profile.resumeUrl}
+            target="_blank"
+            rel="noreferrer"
           >
             {t.nav.resume}
           </a>
@@ -98,6 +100,8 @@ export function Nav() {
           <a
             className="rounded-md border border-accent-border px-[14px] py-2 text-accent"
             href={profile.resumeUrl}
+            target="_blank"
+            rel="noreferrer"
             onClick={() => setOpen(false)}
           >
             {t.nav.resume}

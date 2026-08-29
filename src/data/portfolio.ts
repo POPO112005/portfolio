@@ -9,7 +9,7 @@ import type { Language } from '../i18n/language'
 export const profile = {
   handle: 'Kritkhachon',
   email: 'kritkhachon.vani@bumail.net',
-  resumeUrl: '#',
+  resumeUrl: '/Resume.pdf',
   social: {
     github: 'https://github.com/POPO112005',
     linkedin: 'https://www.linkedin.com/in/kritkhachon-vani/',
