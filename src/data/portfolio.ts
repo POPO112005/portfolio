@@ -150,7 +150,7 @@ export const content: Record<Language, Content> = {
     projects: [
       {
         title: '1MOBY',
-        description: "A skill-assessment and development platform for a company's employees.",
+        description: "A skill-assessment and development platform LMS for a company's employees.\nThis helps solve the problem of companies relying heavily on manual Excel usage.",
         highlights: [
           'Dashboard for tracking skill progress and learning milestones',
           'REST API and data layer built with PostgreSQL',
@@ -163,7 +163,7 @@ export const content: Record<Language, Content> = {
       },
       {
         title: 'Tourism',
-        description: 'Help recommend tourist attractions in the community to website visitors.',
+        description: 'Help recommend tourist attractions in the community to website visitors and improved community income..',
         highlights: [
           'You can see the colored dots on the map to indicate the type of tourist attractions in each region.',
           'Go backend with Prisma handling data access',

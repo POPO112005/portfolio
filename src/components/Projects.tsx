@@ -57,7 +57,7 @@ export function Projects() {
                   <h3 className={`text-xl text-text-bright md:text-[22px] ${heading}`}>{project.title}</h3>
                 </div>
 
-                <p className="mt-4 text-[14.5px] leading-[1.7] text-text-dim">{project.description}</p>
+                <p className="mt-4 whitespace-pre-line text-[14.5px] leading-[1.7] text-text-dim">{project.description}</p>
 
                 {project.highlights && project.highlights.length > 0 && (
                   <ul className="mt-4 flex flex-col gap-[10px] text-[14.5px] leading-[1.6] text-text-dim">

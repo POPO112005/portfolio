@@ -64,7 +64,7 @@ export function ProjectModal({ project, onClose }: { project: Project; onClose: 
           </button>
         </div>
 
-        <p className="mt-[18px] border-b border-border pb-5 text-[14.5px] leading-[1.7] text-text-dim">
+        <p className="mt-[18px] whitespace-pre-line border-b border-border pb-5 text-[14.5px] leading-[1.7] text-text-dim">
           {project.description}
         </p>
 
