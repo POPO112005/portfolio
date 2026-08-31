@@ -149,7 +149,7 @@ export const content: Record<Language, Content> = {
     ],
     projects: [
       {
-        title: '1MOBY',
+        title: 'ConteX Skills',
         description: "A skill-assessment and development LMS platform for a company's employees.\nThis helps solve the problem of companies relying heavily on manual Excel usage.",
         highlights: [
           'Dashboard for tracking skill progress and learning milestones',
